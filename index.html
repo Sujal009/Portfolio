@@ -1,115 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sujal Khunt | Portfolio</title>
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
-  </head>
-  <body class="bg-white text-gray-900">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
+<body class="bg-white text-gray">
     <!-- Navbar -->
-    <header class="bg-white shadow sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-blue-600">Sujal Khunt</h1>
-        <nav class="space-x-4 hidden md:flex">
-          <a href="#about" class="hover:text-blue-600 transition">About</a>
-          <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
-          <a href="#services" class="hover:text-blue-600 transition">Services</a>
-          <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
-        </nav>
-        <!-- Mobile Menu -->
-        <button id="menu-toggle" class="md:hidden text-blue-600 focus:outline-none">
-          ☰
-        </button>
-      </div>
+    <header class="shadow sticky top-0 z-50 bg-white">
+        <div class="container flex justify-between items-center py-4 px-4">
+            <h1 class="text-2xl font-bold text-blue">Sujal Khunt</h1>
+            <nav id="nav-menu" class="md:flex md:space-x-4 flex-col md:flex-row mt-4 md:mt-0">
+                <a href="#about" class="hover:text-blue transition">About</a>
+                <a href="#projects" class="hover:text-blue transition">Projects</a>
+                <a href="#services" class="hover:text-blue transition">Services</a>
+                <a href="#contact" class="hover:text-blue transition">Contact</a>
+            </nav>
+            <!-- Dark Mode Toggle -->
+            <div class="flex items-center">
+                <!-- Moon Icon -->
+                <svg id="dark-mode-toggle" class="ml-4 cursor-pointer w-6 h-6" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <!-- Sun Icon -->
+                <svg id="light-mode-toggle" class="ml-4 cursor-pointer w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </div>
+            <!-- Mobile Toggle -->
+            <svg id="menu-toggle" class="md:hidden cursor-pointer w-6 h-6" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </div>
     </header>
 
     <!-- Hero -->
-    <section class="h-screen flex items-center justify-center text-center px-4 bg-gradient-to-b from-blue-50 to-white">
-      <div>
-        <h2 class="text-4xl font-extrabold mb-4">Hi, I'm Sujal Khunt 👋</h2>
-        <p class="text-lg mb-6">I build fast, clean, and powerful websites that drive results.</p>
-        <a href="#contact" class="px-6 py-3 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition">Let's Work Together</a>
-      </div>
+    <section class="hero-section">
+        <div class="text-center">
+            <h2 class="text-4xl font-extrabold mb-4">Hi, I'm Sujal Khunt 👋</h2>
+            <p class="text-lg mb-6">I build fast, clean, and powerful websites that drive results.</p>
+            <a href="#contact" class="btn">Let's Work Together</a>
+        </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="max-w-4xl mx-auto px-4 py-16">
-      <h3 class="text-3xl font-semibold mb-4">About Me</h3>
-      <p class="text-gray-700 leading-relaxed">
-        I’m Sujal Khunt, a software engineer with expertise in building high-performance websites and digital solutions. With a strong foundation in both frontend and backend development, I specialize in creating seamless user experiences while ensuring optimal performance and scalability.
-      </p>
-      <p class="text-gray-700 leading-relaxed mt-4">
-        My passion lies in leveraging technology to solve real-world problems. Whether it’s crafting intuitive interfaces or optimizing backend systems, I’m committed to delivering impactful solutions that align with your business goals.
-      </p>
+    <section id="about" class="container py-16">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div>
+                <h3 class="text-3xl font-semibold mb-4">About Me</h3>
+                <p class="mb-4">
+                    Hi, I’m Sujal Khunt—a passionate software engineer specializing in building high-performance
+                    websites
+                    and digital solutions. With a strong foundation in both frontend and backend development, I create
+                    seamless user experiences while ensuring optimal performance and scalability.
+                </p>
+                <p class="mb-4">
+                    My journey into software development began when I realized how technology could solve real-world
+                    problems. Whether it’s crafting intuitive interfaces, optimizing backend systems, or integrating
+                    AI/ML
+                    solutions, I’m committed to delivering impactful results that align with your business goals.
+                </p>
+                <ul class="list-disc pl-6 text-gray-700">
+                    <li>Custom website development (frontend & backend)</li>
+                    <li>Performance optimization for fast load times</li>
+                    <li>Cloud deployment and scalable hosting solutions</li>
+                    <li>AI/ML integration for data-driven insights</li>
+                    <li>Digital marketing strategy and campaign management</li>
+                </ul>
+                <a href="#contact" class="btn mt-6">Let’s Work Together</a>
+            </div>
+        </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="bg-gray-50 px-4 py-16">
-      <div class="max-w-5xl mx-auto">
-        <h3 class="text-3xl font-semibold mb-8">Projects</h3>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <!-- Project Card 1 -->
-          <div class="bg-white p-6 rounded-xl shadow transition hover:shadow-lg">
-            <h4 class="text-xl font-semibold mb-2">SherQuill Media</h4>
-            <p class="text-gray-600 mb-2">A dynamic website for a digital marketing agency showcasing services, portfolio, and testimonials.</p>
-            <a href="#" class="text-blue-600 hover:underline">View Project →</a>
-          </div>
-          <!-- Project Card 2 -->
-          <div class="bg-white p-6 rounded-xl shadow transition hover:shadow-lg">
-            <h4 class="text-xl font-semibold mb-2">Vacationam</h4>
-            <p class="text-gray-600 mb-2">An e-commerce platform built with advanced SEO techniques to boost organic traffic and sales.</p>
-            <a href="#" class="text-blue-600 hover:underline">View Project →</a>
-          </div>
-          <!-- Project Card 3 -->
-          <div class="bg-white p-6 rounded-xl shadow transition hover:shadow-lg">
-            <h4 class="text-xl font-semibold mb-2">HealthHub</h4>
-            <p class="text-gray-600 mb-2">A healthcare AI project aimed at improving diagnostics using machine learning models.</p>
-            <a href="#" class="text-blue-600 hover:underline">View Project →</a>
-          </div>
+    <section id="projects" class="bg-light py-16">
+        <div class="container">
+            <h3 class="text-3xl font-semibold mb-8">Projects</h3>
+            <div class="projects-grid">
+                <div class="card">
+                    <h4 class="text-xl font-semibold mb-2">SherQuill Media</h4>
+                    <p class="mb-2">A dynamic website for a digital marketing agency showcasing services, portfolio, and
+                        testimonials.</p>
+                    <a href="#" class="text-blue hover-link">View Project →</a>
+                </div>
+                <div class="card">
+                    <h4 class="text-xl font-semibold mb-2">Vacationam</h4>
+                    <p class="mb-2">An e-commerce platform built with advanced SEO techniques to boost organic traffic
+                        and sales.</p>
+                    <a href="#" class="text-blue hover-link">View Project →</a>
+                </div>
+                <div class="card">
+                    <h4 class="text-xl font-semibold mb-2">HealthHub</h4>
+                    <p class="mb-2">A healthcare AI project aimed at improving diagnostics using machine learning
+                        models.</p>
+                    <a href="#" class="text-blue hover-link">View Project →</a>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="px-4 py-16">
-      <div class="max-w-4xl mx-auto">
-        <h3 class="text-3xl font-semibold mb-4">Services</h3>
-        <ul class="list-disc ml-6 text-gray-700 space-y-2">
-          <li>Custom Website Development (Frontend & Backend)</li>
-          <li>Performance Optimization for Fast Load Times</li>
-          <li>Cloud Deployment & Scalable Hosting Solutions</li>
-          <li>AI/ML Integration for Data-Driven Insights</li>
-          <li>Digital Marketing Strategy & Campaign Management</li>
-        </ul>
-      </div>
+    <section id="services" class="bg-light py-16">
+        <div class="container">
+            <h3 class="text-3xl font-semibold text-center mb-8">What I Offer</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="service-card p-6 bg-white rounded-lg shadow-md text-center">
+                    <i class="fas fa-code text-4xl text-blue mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Custom Website Development</h4>
+                    <p class="text-gray-600">Frontend and backend development tailored to your business needs.</p>
+                </div>
+                <div class="service-card p-6 bg-white rounded-lg shadow-md text-center">
+                    <i class="fas fa-tachometer-alt text-4xl text-blue mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Performance Optimization</h4>
+                    <p class="text-gray-600">Boost website speed and performance for better user experience.</p>
+                </div>
+                <div class="service-card p-6 bg-white rounded-lg shadow-md text-center">
+                    <i class="fas fa-cloud-upload-alt text-4xl text-blue mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Cloud Deployment</h4>
+                    <p class="text-gray-600">Scalable hosting solutions and cloud deployment for your projects.</p>
+                </div>
+                <div class="service-card p-6 bg-white rounded-lg shadow-md text-center">
+                    <i class="fas fa-brain text-4xl text-blue mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">AI/ML Integration</h4>
+                    <p class="text-gray-600">Leverage machine learning for data-driven insights and automation.</p>
+                </div>
+                <div class="service-card p-6 bg-white rounded-lg shadow-md text-center">
+                    <i class="fas fa-chart-line text-4xl text-blue mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Digital Marketing Strategy</h4>
+                    <p class="text-gray-600">Plan and execute campaigns to grow your online presence.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="bg-blue-50 px-4 py-16">
-      <div class="max-w-3xl mx-auto text-center">
-        <h3 class="text-3xl font-semibold mb-4">Let’s Build Something Great Together</h3>
-        <p class="text-gray-700 mb-8">Have a project in mind? Let’s collaborate and bring your ideas to life!</p>
-        <a href="mailto:sujalkhunt9@gmail.com" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
-          Email Me
-        </a>
-      </div>
+    <section id="contact" class="bg-light py-16 text-center">
+        <div class="container">
+            <h3 class="text-3xl font-semibold mb-4">Let’s Build Something Great Together</h3>
+            <p class="mb-8">Have a project in mind? Let’s collaborate and bring your ideas to life!</p>
+            <a href="mailto:sujalkhunt9@gmail.com" class="btn">Email Me</a>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center text-gray-500 py-6">
-      © 2025 Sujal Khunt. All rights reserved. <br />
-      Designed by Sujal Khunt.
+    <footer class="text-center text-gray py-6">
+        © 2025 Sujal Khunt. All rights reserved. <br />
+        Designed by Sujal Khunt.
     </footer>
 
-    <!-- Mobile Menu Toggle Script -->
     <script>
-      const menuToggle = document.getElementById('menu-toggle');
-      const navLinks = document.querySelector('nav');
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('hidden');
-      });
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const lightModeToggle = document.getElementById('light-mode-toggle');
+        const body = document.body;
+
+        // Check localStorage for user preference
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        if (isDarkMode) {
+            body.classList.add('dark');
+            darkModeToggle.classList.add('hidden');
+            lightModeToggle.classList.remove('hidden');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.add('dark');
+            darkModeToggle.classList.add('hidden');
+            lightModeToggle.classList.remove('hidden');
+            localStorage.setItem('darkMode', true);
+        });
+
+        lightModeToggle.addEventListener('click', () => {
+            body.classList.remove('dark');
+            lightModeToggle.classList.add('hidden');
+            darkModeToggle.classList.remove('hidden');
+            localStorage.setItem('darkMode', false);
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+            });
+        });
     </script>
-  </body>
+</body>
+
 </html>

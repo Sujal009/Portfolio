@@ -346,3 +346,8 @@ svg:hover {
     display: none;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image fills its container without distortion */
+}

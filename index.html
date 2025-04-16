@@ -56,11 +56,22 @@
         <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <!-- Avatar/Image -->
             <div class="relative w-48 h-48">
+                <!-- Avatar/Image -->
                 <picture>
-                    <source srcset="images/avatar.webp" type="image/webp">
-                    <img src="images/avatar.jpeg" alt="Sujal Khunt - Software Engineer" class="w-48 h-48 rounded-full object-cover shadow-lg">
+                    <source srcset="
+                    images/avatar/avatar-small.webp 480w,
+                    images/avatar/avatar-medium.webp 800w,
+                    images/avatar/avatar-large.webp 1200w
+                " type="image/webp" sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px">
+                    <source srcset="
+                    images/avatar/avatar-small.jpeg 480w,
+                    images/avatar/avatar-medium.jpeg 800w,
+                    images/avatar/avatar-large.jpeg 1200w
+                " type="image/jpeg" sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px">
+                    <img src="images/avatar.jpeg" alt="Sujal Khunt - Software Engineer"
+                        class="w-48 h-48 rounded-full object-cover shadow-lg" loading="lazy">
                 </picture>
-<!--                 
+                <!--                 
                 <img src="images/avatar.jpeg" alt="Sujal Khunt - Software Engineer"
                     class="w-full h-full rounded-full object-cover shadow-lg border-4 border-blue"> -->
                 <div class="absolute bottom-2 right-2">
